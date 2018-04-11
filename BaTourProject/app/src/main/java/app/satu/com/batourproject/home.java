@@ -20,19 +20,22 @@ public class home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
+        /*
         //memeriksa database
         DatabaseHelper db = new DatabaseHelper(getApplicationContext());
 
-        Ulasan u = new Ulasan("nigger", "niger@gmale.com", "mantap", 5);
+        TempatWisata t = new TempatWisata("gunung", "alam", "jalan", "bagus", 10,
+                "10-13", "08080", 8);
 
         //insert data hardcode
-        boolean inserted = db.createUlasan(u);
+        boolean inserted = db.insertTempatWisata(t);
 
         //untuk memeriksa apakah data berhasil dimasukkan
         if(inserted == true)
-            Toast.makeText(home.this, "Data inserted!", Toast.LENGTH_LONG).show();
+            Toast.makeText(home.this, "Data Tempat Wisata inserted!", Toast.LENGTH_LONG).show();
         else
-            Toast.makeText(home.this, "Data not inserted!", Toast.LENGTH_LONG).show();
+            Toast.makeText(home.this, "Data Tempat Wisata not inserted!", Toast.LENGTH_LONG).show();
+        */
 
         viewPager = findViewById(R.id.view_pager);
         adapter = new CustomSwipeAdapter(this);

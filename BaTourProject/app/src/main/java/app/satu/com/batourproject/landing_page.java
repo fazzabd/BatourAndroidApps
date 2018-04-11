@@ -20,19 +20,21 @@ public class landing_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.landing_page);
 
+        /*
         //memeriksa database
         DatabaseHelper db = new DatabaseHelper(getApplicationContext());
 
         Alamat a = new Alamat(69, 69);
 
         //insert data hardcode
-        boolean inserted = db.createAlamat(a);
+        boolean inserted = db.insertAlamat(a);
 
         //untuk memeriksa apakah data berhasil dimasukkan
         if(inserted == true)
             Toast.makeText(landing_page.this, "Data inserted!", Toast.LENGTH_LONG).show();
         else
             Toast.makeText(landing_page.this, "Data not inserted!", Toast.LENGTH_LONG).show();
+        */
 
         buttonGetStarted = findViewById(R.id.button_get_started);
 

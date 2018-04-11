@@ -51,7 +51,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             ", " + LONGITUDE + "))";
 
     private static final String CREATE_TABLE_TEMPAT_WISATA = "create table "
-            + TABLE_TEMPAT_WISATA + " (" + NAMA + " TEXT PRIMARY KEY, " + JENIS + " TEXT PRIMARY KEY, " +
+            + TABLE_TEMPAT_WISATA + " (" + NAMA + " TEXT, " + JENIS + " TEXT, " +
             ALAMAT + " TEXT, " + DESKRIPSI + " TEXT, " + HARGA_TIKET_MASUK + " FLOAT, " + JAM_OPERASIONAL + " TEXT, "
             + NO_TELEPON + " TEXT, " + AVERAGE_RATING + " FLOAT, PRIMARY KEY (" + NAMA +
             ", " + JENIS + "))";
@@ -64,7 +64,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(CREATE_TABLE_ULASAN);
         sqLiteDatabase.execSQL(CREATE_TABLE_ALAMAT);
-        //sqLiteDatabase.execSQL(CREATE_TABLE_TEMPAT_WISATA);
+        sqLiteDatabase.execSQL(CREATE_TABLE_TEMPAT_WISATA);
     }
 
     @Override
@@ -76,7 +76,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
-    public boolean createAlamat(Alamat alamat) {
+    public boolean insertAlamat(Alamat alamat) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         //penampung data model
@@ -94,7 +94,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public boolean createUlasan(Ulasan ulasan) {
+    public boolean insertUlasan(Ulasan ulasan) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         //penampung data model
@@ -105,6 +105,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(RATING, ulasan.getRating());
 
         long result = db.insert(TABLE_ULASAN, null, values);
+
+        if(result==-1) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    public boolean insertTempatWisata(TempatWisata tempatWisata) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        //penampung data model
+        ContentValues values = new ContentValues();
+        values.put(NAMA, tempatWisata.getNama());
+        values.put(JENIS, tempatWisata.getJenis());
+        values.put(ALAMAT, tempatWisata.getAlamat());
+        values.put(DESKRIPSI, tempatWisata.getDeskripsi());
+        values.put(HARGA_TIKET_MASUK, tempatWisata.getHargaTiketMasuk());
+        values.put(JAM_OPERASIONAL, tempatWisata.getJamOperasional());
+        values.put(NO_TELEPON, tempatWisata.getNoTelepon());
+        values.put(AVERAGE_RATING, tempatWisata.getAverageRating());
+
+        long result = db.insert(TABLE_TEMPAT_WISATA, null, values);
 
         if(result==-1) {
             return false;
