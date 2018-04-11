@@ -62,7 +62,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        //sqLiteDatabase.execSQL(CREATE_TABLE_ULASAN);
+        sqLiteDatabase.execSQL(CREATE_TABLE_ULASAN);
         sqLiteDatabase.execSQL(CREATE_TABLE_ALAMAT);
         //sqLiteDatabase.execSQL(CREATE_TABLE_TEMPAT_WISATA);
     }
@@ -76,7 +76,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
-    public long createAlamat(Alamat alamat) {
+    public boolean createAlamat(Alamat alamat) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         //penampung data model
@@ -85,6 +85,32 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(LONGITUDE, alamat.getLongitude());
 
         long result = db.insert(TABLE_ALAMAT, null, values);
-        return result;
+
+        if(result==-1) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    public boolean createUlasan(Ulasan ulasan) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        //penampung data model
+        ContentValues values = new ContentValues();
+        values.put(PENGULAS, ulasan.getPengulas());
+        values.put(EMAIL, ulasan.getEmail());
+        values.put(DETAIL_ULASAN, ulasan.getDetailUlasan());
+        values.put(RATING, ulasan.getRating());
+
+        long result = db.insert(TABLE_ULASAN, null, values);
+
+        if(result==-1) {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 }

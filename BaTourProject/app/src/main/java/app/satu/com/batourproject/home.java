@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class home extends AppCompatActivity {
     ViewPager viewPager;
@@ -18,6 +19,20 @@ public class home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
+
+        //memeriksa database
+        DatabaseHelper db = new DatabaseHelper(getApplicationContext());
+
+        Ulasan u = new Ulasan("nigger", "niger@gmale.com", "mantap", 5);
+
+        //insert data hardcode
+        boolean inserted = db.createUlasan(u);
+
+        //untuk memeriksa apakah data berhasil dimasukkan
+        if(inserted == true)
+            Toast.makeText(home.this, "Data inserted!", Toast.LENGTH_LONG).show();
+        else
+            Toast.makeText(home.this, "Data not inserted!", Toast.LENGTH_LONG).show();
 
         viewPager = findViewById(R.id.view_pager);
         adapter = new CustomSwipeAdapter(this);
