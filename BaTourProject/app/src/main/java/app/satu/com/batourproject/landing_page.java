@@ -20,6 +20,11 @@ public class landing_page extends AppCompatActivity {
         setContentView(R.layout.landing_page);
 
         DatabaseHelper db = new DatabaseHelper(getApplicationContext());
+
+        Alamat a = new Alamat(6, 6);
+
+        long inserted = db.createAlamat(a);
+
         buttonGetStarted = findViewById(R.id.button_get_started);
 
         buttonGetStarted.setOnClickListener(new View.OnClickListener() {

@@ -1,5 +1,6 @@
 package app.satu.com.batourproject;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -40,29 +41,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String AVERAGE_RATING = "average_rating";
 
     //Query
-    private static final String CREATE_TABLE_ULASAN = "CREATE TABLE "
-            + TABLE_ULASAN + "(" + PENGULAS + " TEXT PRIMARY KEY," + EMAIL
-            + " TEXT," + DETAIL_ULASAN + " TEXT," + RATING
-            + " FLOAT" + ")";
+    private static final String CREATE_TABLE_ULASAN = "create table "
+            + TABLE_ULASAN + " (" + PENGULAS + " TEXT PRIMARY KEY, " + EMAIL + " TEXT, " +
+            DETAIL_ULASAN + " TEXT, " + RATING
+            + " FLOAT)";
 
-    private static final String CREATE_TABLE_ALAMAT = "CREATE TABLE "
-            + TABLE_ALAMAT + "(" + LATITUDE + " FLOAT PRIMARY KEY," + LONGITUDE
-            + " FLOAT PRIMARY KEY" + ")";
+    private static final String CREATE_TABLE_ALAMAT = "create table "
+            + TABLE_ALAMAT + " (" + LATITUDE + " FLOAT, " + LONGITUDE + " FLOAT, PRIMARY KEY (" + LATITUDE +
+            ", " + LONGITUDE + "))";
 
-    private static final String CREATE_TABLE_TEMPAT_WISATA = "CREATE TABLE "
-            + TABLE_TEMPAT_WISATA + "(" + NAMA + " TEXT PRIMARY KEY," + JENIS
-            + " TEXT PRIMARY KEY," + ALAMAT + " TEXT," + DESKRIPSI
-            + " TEXT," + HARGA_TIKET_MASUK + " FLOAT," + JAM_OPERASIONAL + " TEXT,"
-            + NO_TELEPON + " TEXT," + AVERAGE_RATING + " FLOAT" + ")";
+    private static final String CREATE_TABLE_TEMPAT_WISATA = "create table "
+            + TABLE_TEMPAT_WISATA + " (" + NAMA + " TEXT PRIMARY KEY, " + JENIS + " TEXT PRIMARY KEY, " +
+            ALAMAT + " TEXT, " + DESKRIPSI + " TEXT, " + HARGA_TIKET_MASUK + " FLOAT, " + JAM_OPERASIONAL + " TEXT, "
+            + NO_TELEPON + " TEXT, " + AVERAGE_RATING + " FLOAT, PRIMARY KEY (" + NAMA +
+            ", " + JENIS + "))";
+
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL(CREATE_TABLE_ULASAN);
+        //sqLiteDatabase.execSQL(CREATE_TABLE_ULASAN);
         sqLiteDatabase.execSQL(CREATE_TABLE_ALAMAT);
-        sqLiteDatabase.execSQL(CREATE_TABLE_TEMPAT_WISATA);
+        //sqLiteDatabase.execSQL(CREATE_TABLE_TEMPAT_WISATA);
     }
 
     @Override
@@ -72,5 +74,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_TEMPAT_WISATA);
 
         onCreate(sqLiteDatabase);
+    }
+
+    public long createAlamat(Alamat alamat) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        //penampung data model
+        ContentValues values = new ContentValues();
+        values.put(LATITUDE, alamat.getLatitude());
+        values.put(LONGITUDE, alamat.getLongitude());
+
+        long result = db.insert(TABLE_ALAMAT, null, values);
+        return result;
     }
 }
