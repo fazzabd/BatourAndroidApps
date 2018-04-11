@@ -19,6 +19,7 @@ public class landing_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.landing_page);
 
+        DatabaseHelper db = new DatabaseHelper(getApplicationContext());
         buttonGetStarted = findViewById(R.id.button_get_started);
 
         buttonGetStarted.setOnClickListener(new View.OnClickListener() {
