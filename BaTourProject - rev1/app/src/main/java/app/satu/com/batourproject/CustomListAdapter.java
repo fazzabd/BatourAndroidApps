@@ -1,10 +1,12 @@
 package app.satu.com.batourproject;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -54,6 +56,7 @@ public class CustomListAdapter extends BaseAdapter{
         // TODO Auto-generated method stub
         Holder holder=new Holder();
         View rowView;
+        Button buttonDeskripsi;
         rowView = inflater.inflate(R.layout.list_item_layout, null);
         holder.tv=(TextView) rowView.findViewById(R.id.textView1);
         holder.img=(ImageView) rowView.findViewById(R.id.imageView1);
@@ -64,6 +67,15 @@ public class CustomListAdapter extends BaseAdapter{
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Toast.makeText(context, "You Clicked "+result[position], Toast.LENGTH_LONG).show();
+            }
+        });
+        buttonDeskripsi = rowView.findViewById(R.id.button_deskripsi);
+
+        buttonDeskripsi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Intent toDeskripsi = new Intent(CustomListAdapter.this, deskripsi_wisata.class);
+                context.startActivity(new Intent(context, deskripsi_wisata.class));
             }
         });
         return rowView;
