@@ -70,12 +70,20 @@ public class CustomListAdapter extends BaseAdapter{
             }
         });
         buttonDeskripsi = rowView.findViewById(R.id.button_deskripsi);
-
+        buttonDeskripsi.setTag(position);
         buttonDeskripsi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Intent toDeskripsi = new Intent(CustomListAdapter.this, deskripsi_wisata.class);
-                context.startActivity(new Intent(context, deskripsi_wisata.class));
+                int position = (Integer) view.getTag();
+                switch (position) {
+                    case 0:
+                        context.startActivity(new Intent(context, deskripsi_wisata.class));
+                        break;
+                    case 1: //contoh untuk mengecek apakah pagenya beda
+                        context.startActivity(new Intent(context, comment_page.class));
+                }
+
             }
         });
         return rowView;
