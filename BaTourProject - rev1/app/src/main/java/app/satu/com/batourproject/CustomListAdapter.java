@@ -82,20 +82,10 @@ public class CustomListAdapter extends BaseAdapter{
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Toast.makeText(context, "You Clicked "+result[position], Toast.LENGTH_LONG).show();
-            }
-        });
-        buttonDeskripsi = rowView.findViewById(R.id.button_deskripsi);
-        buttonDeskripsi.setTag(position);
-        buttonDeskripsi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Intent toDeskripsi = new Intent(CustomListAdapter.this, deskripsi_wisata.class);
-                int itemposition = (Integer) view.getTag();
+                //Toast.makeText(context, "You Clicked "+result[position], Toast.LENGTH_LONG).show();
                 Intent toDesc = new Intent(context, deskripsi_wisata.class);
-                toDesc.putExtra("nama", result[itemposition]);
+                toDesc.putExtra("nama", result[position]);
                 context.startActivity(toDesc);
-
             }
         });
         return rowView;
