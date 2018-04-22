@@ -22,7 +22,7 @@
         android:textSize="17dp" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="110dp"
@@ -31,15 +31,7 @@
         android:textSize="10dp" />
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="110dp"
-        android:layout_marginTop="40dp"
-        android:text="Kab. Bandung Barat"
-        android:textSize="8dp" />
-    <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="110dp"
@@ -50,15 +42,13 @@
         android:textSize="10dp" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button"
-        android:layout_alignParentLeft="true"
+        android:layout_marginRight="10dp"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="10dp"
+        android:layout_alignTop="@+id/textView3"
         android:gravity="right"
-        android:layout_marginRight="5dp"
         android:text="HTM:5000/org"
         android:textColor="#09b709"
         android:textSize="12dp" />
@@ -66,10 +56,11 @@
     <Button
         android:id="@+id/button_deskripsi"
         android:layout_width="160dp"
-        android:layout_height="20dp"
+        android:layout_height="35dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="72dp"
+        android:layout_marginRight="10dp"
         android:background="#0f730f"
         android:text="Baca Selengkapnya"
         android:textColor="#ddd"

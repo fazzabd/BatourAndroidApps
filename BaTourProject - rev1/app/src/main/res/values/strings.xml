@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Bandung Tourism</string>
-    <string name="kawah_putih">Kawah Putih adalah sebuah tempat wisata di Jawa Barat yang terletak di kawasan Ciwidey. Kawah putih merupakan sebuah danau yang terbentuk dari letusan Gunung Patuha. Tanah yang bercampur belerang di sekitar kawah ini berwarna putih, lalu warna air yang berada di kawah ini berwarna putih kehijauan, yang unik dari kawah ini adalah airnya kadang berubah warna. Kawah ini berada pada ketinggian +2090 m dpl dibawah puncak/titik tertinggi Gunung Patuha.
-    Untuk sampai di kawah putih pengunjung bisa menggunakan route perjalanan sebagai berikut: Pengunjung dari luar Bandung yang menggunnakan kendaraan roda empat dapat melewati jalur pintu Keluar Tol Kopo, melewati sayati dan dilanjutkan ke Soreang, dari soreang dilanjukan ke Ciwidey dan sampailah di lokasi kawah putih. Route alternatif bisa menggunakan jalur tol Buah Batu.
-Sedangkan bagi wisatawan yang menggunakan kendaraan umum, akses ke kawah putih ditempuh dengan menggunakan jalur terminal Leuwi Panjang - dilanjutkan ke terminal Ciwidey - lokasi Kawah Putih</string>
-</resources>
+    <string name="kawah_putih">
+    Kawah Putih Ciwidey berada di kawasan pegunungan yang mempunyai ketinggian lebih dari 2.400 meter di atas permukaan laut. Dengan ketinggian tersebut, suhu udara di kawasan Kawah Putih tentu saja dingin dengan suhu 8 derajat Celsius sampai dengan 22 derajat Celsius, oleh karena itu jangan lupa membawa jaket atau memakai pakaian yang tebal.
+    Selain untuk dinikmati keindahannya oleh para wisatawan, Kawah Putih Ciwidey juga sering kali menjadi tempat kegiatan lain, misalnya pengambilan gambar film, melukis, foto pengantin, sampai dengan kegiatan mendaki dan berkuda.Karena telah dikembangkan sebagai kawasan wisata, Kawah Putih mempunyai fasilitas penunjang kenyamanan berwisata yang memadai, yaitu :Area parkir yang luas, Mushola, Transportasi dari gerbang depan sampai dengan kawah, Pusat informasi,Restoran dan warung makanan, dan Toilet
+    </string>
+
+
+
+
+    </resources>

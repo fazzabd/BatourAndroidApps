@@ -17,12 +17,18 @@ import android.widget.Toast;
 
 public class CustomListAdapter extends BaseAdapter{
     String [] result;
+    String [] result1;
+    String [] result2;
+    String [] result3;
     Context context;
     int [] imageId;
     private static LayoutInflater inflater=null;
-    public CustomListAdapter(list_page listPage, String[] prgmNameList, int[] prgmImages) {
+    public CustomListAdapter(list_page listPage, String[] prgmNameList, String[] Alamat, String[] opengate,String[] htm, int[] prgmImages) {
         // TODO Auto-generated constructor stub
         result=prgmNameList;
+        result1=Alamat;
+        result2=opengate;
+        result3=htm;
         context=listPage;
         imageId=prgmImages;
         inflater = ( LayoutInflater )context.
@@ -33,6 +39,7 @@ public class CustomListAdapter extends BaseAdapter{
         // TODO Auto-generated method stub
         return result.length;
     }
+
 
     @Override
     public Object getItem(int position) {
@@ -49,6 +56,9 @@ public class CustomListAdapter extends BaseAdapter{
     public class Holder
     {
         TextView tv;
+        TextView tv1;
+        TextView tv2;
+        TextView tv3;
         ImageView img;
     }
     @Override
@@ -59,8 +69,14 @@ public class CustomListAdapter extends BaseAdapter{
         Button buttonDeskripsi;
         rowView = inflater.inflate(R.layout.list_item_layout, null);
         holder.tv=(TextView) rowView.findViewById(R.id.textView1);
+        holder.tv1=(TextView) rowView.findViewById(R.id.textView2);
+        holder.tv2=(TextView) rowView.findViewById(R.id.textView3);
+        holder.tv3=(TextView) rowView.findViewById(R.id.textView4);
         holder.img=(ImageView) rowView.findViewById(R.id.imageView1);
         holder.tv.setText(result[position]);
+        holder.tv1.setText(result1[position]);
+        holder.tv2.setText(result2[position]);
+        holder.tv3.setText(result3[position]);
         holder.img.setImageResource(imageId[position]);
         rowView.setOnClickListener(new View.OnClickListener() {
             @Override
