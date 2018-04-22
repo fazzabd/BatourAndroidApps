@@ -91,14 +91,10 @@ public class CustomListAdapter extends BaseAdapter{
             @Override
             public void onClick(View view) {
                 //Intent toDeskripsi = new Intent(CustomListAdapter.this, deskripsi_wisata.class);
-                int position = (Integer) view.getTag();
-                switch (position) {
-                    case 0:
-                        context.startActivity(new Intent(context, deskripsi_wisata.class));
-                        break;
-                    case 1: //contoh untuk mengecek apakah pagenya beda
-                        context.startActivity(new Intent(context, comment_page.class));
-                }
+                int itemposition = (Integer) view.getTag();
+                Intent toDesc = new Intent(context, deskripsi_wisata.class);
+                toDesc.putExtra("nama", result[itemposition]);
+                context.startActivity(toDesc);
 
             }
         });

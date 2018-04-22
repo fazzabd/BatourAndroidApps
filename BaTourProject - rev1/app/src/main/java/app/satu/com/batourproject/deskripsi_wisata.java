@@ -13,7 +13,7 @@ public class deskripsi_wisata extends AppCompatActivity {
         setContentView(R.layout.deskripsi_wisata);
 
         viewPager1 = findViewById(R.id.view_pager1);
-        adapter1 = new CustomSwipeAdapter(this);
+        adapter1 = new CustomSwipeAdapter(this, getIntent());
         viewPager1.setAdapter(adapter1);
     }
 }
