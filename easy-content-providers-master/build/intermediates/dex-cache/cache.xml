@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-22.2.0_4b84bde4c3483b7d66db458e9951aefe970f137d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Lucky Nuget\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0_02416f6c63d764f4bd686314347afaacad3b5b66.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\exploded-aar\me.everything\providers-core\1.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="caa3391c824ef6514b70aa0db73a3f37c4ac33ef">
+        <dex dex="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\pre-dexed\debug\me.everything-providers-core-1.0.0_32691598da5dd2da4857d141f7b647bd65fd0901.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Lucky Nuget\.gradle\caches\modules-2\files-2.1\commons-cli\commons-cli\1.2\2bf96b7aa8b611c177d329452af1dc933e14501c\commons-cli-1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="2bf96b7aa8b611c177d329452af1dc933e14501c">
+        <dex dex="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\pre-dexed\debug\commons-cli-1.2_56bbcc324dee019f8d4c00cc676c18ea3ecec025.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\pre-dexed\debug\com.android.support-design-22.2.0_9eba4b6ae278fe7e8846aeb1ea0005b04198b177.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-22.2.0_d87d8dda9fb30e54c625257fa6cd7655ffc0b043.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Lucky Nuget\.gradle\caches\modules-2\files-2.1\com.facebook.stetho\stetho\1.1.1\ab1142c5adfa474e7494cba19fd9fc6e73207960\stetho-1.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="ab1142c5adfa474e7494cba19fd9fc6e73207960">
+        <dex dex="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\pre-dexed\debug\stetho-1.1.1_178e5df48188d053748bcf3252a61ab47d7f0908.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Lucky Nuget\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\2.0.1\516c03b21d50a644d538de0f0369c620989cd8f0\jsr305-2.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="516c03b21d50a644d538de0f0369c620989cd8f0">
+        <dex dex="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\pre-dexed\debug\jsr305-2.0.1_330e3bbf207063689d415770627686359ddb49e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\exploded-aar\me.everything\providers-android\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="bb20e425aa641153760dbff7f5afc666f94b5647">
+        <dex dex="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\pre-dexed\debug\me.everything-providers-android-1.0.1_b75920c14a4354789328beebc01284c8db1f5003.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0_0ec27c6540a7c496bc56dffbd5e2fea4b5cce725.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\exploded-aar\me.everything\providers-stetho\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="ca8312f2cfd8c79bc4878e9235391bfb6af7dad7">
+        <dex dex="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\pre-dexed\debug\me.everything-providers-stetho-1.0.1_c87784475cbbe05b4d0e84c27aac9a41f675b4c8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="c6d79137693d494dee16372d3921f919eb724ced">
+        <dex dex="E:\Android\easy-content-providers-master\easy-content-providers-master\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-22.0.0_f71ae4af6efce9bd914fcbd1d360d15a1d7ec043.jar" />
+    </item>
+
+</items>
