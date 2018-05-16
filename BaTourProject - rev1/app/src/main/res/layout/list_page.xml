@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".list_page" >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header"
+        android:minHeight="?attr/actionBarSize">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:background="@drawable/bookmark1"
+            />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:src="@drawable/logo" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:background="@drawable/ic_search"
+            android:layout_marginRight="15dp"/>
+    </android.support.v7.widget.Toolbar>
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wisata Alam"
+        android:gravity="center"
+        android:textColor="#ddd"
+        android:textSize="25dp"
+        android:background="@drawable/header"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:background="@drawable/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </ListView>
+
+</LinearLayout>
