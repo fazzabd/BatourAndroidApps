@@ -1,4 +1,0 @@
-#Wed Apr 25 01:17:38 ICT 2018
-base.0=E\:\\Android\\easy-content-providers-master\\easy-content-providers-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
-renamed.0=classes.dex
-file.0=E\:\\Android\\easy-content-providers-master\\easy-content-providers-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
