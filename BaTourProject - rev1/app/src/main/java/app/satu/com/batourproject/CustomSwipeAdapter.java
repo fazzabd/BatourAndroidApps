@@ -15,7 +15,7 @@ import android.widget.Toast;
  */
 
 public class CustomSwipeAdapter extends PagerAdapter{
-    private int[] image_resources = {R.drawable.kawah_putih, R.drawable.perkebunan_teh_rancabali, R.drawable.situ_patenggang};
+    private int[] image_resources = {R.drawable.r_alam, R.drawable.r_belanja, R.drawable.r_sejarah};
     private int[] image_resources1 = {R.drawable.tangkubanperahu, R.drawable.batucinta, R.drawable.hills};
     private int[] image_resources2 = {R.drawable.castle, R.drawable.hills, R.drawable.bank};
     private Context ctx;

@@ -18,15 +18,15 @@
         android:text="Wisata Alam"
         android:textSize="17dp" />
 </LinearLayout>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:background="#ddd">
-    <ImageView
-        android:id="@+id/imageViewHome"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        <ImageView
+            android:id="@+id/imageViewHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
 
-    </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

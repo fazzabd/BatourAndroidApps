@@ -212,4 +212,39 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return tempatWisata;
     }
+
+    public ArrayList<TempatWisata> getTempatWisataKategori(String jenisTW) {
+        ArrayList<TempatWisata> listTempatWisata = new ArrayList<TempatWisata>();
+        Cursor c = null;
+        try {
+            String selectQuery = "SELECT * FROM " + TABLE_TEMPAT_WISATA + " WHERE " + JENIS + " = '" + jenisTW + "'";
+            SQLiteDatabase db = this.getWritableDatabase();
+            c = db.rawQuery(selectQuery, null);
+            if(c.getCount() > 0) {
+                c.moveToFirst();
+                do {
+                    String nama = c.getString((c.getColumnIndex(NAMA)));
+                    String jenis = c.getString((c.getColumnIndex(JENIS)));
+                    String alamat = c.getString((c.getColumnIndex(ALAMAT)));
+                    String deskripsi = c.getString((c.getColumnIndex(DESKRIPSI)));
+                    Float harga = c.getFloat((c.getColumnIndex(HARGA_TIKET_MASUK)));
+                    String jam = c.getString((c.getColumnIndex(JAM_OPERASIONAL)));
+                    String telp = c.getString((c.getColumnIndex(NO_TELEPON)));
+                    Float rating = c.getFloat((c.getColumnIndex(AVERAGE_RATING)));
+
+                    TempatWisata tw = new TempatWisata(
+                            nama, jenis, alamat, deskripsi, harga, jam, telp, rating
+                    );
+
+                    listTempatWisata.add(tw);
+                    c.moveToNext();
+                } while (!c.isAfterLast());
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+        }
+        return listTempatWisata;
+    }
 }

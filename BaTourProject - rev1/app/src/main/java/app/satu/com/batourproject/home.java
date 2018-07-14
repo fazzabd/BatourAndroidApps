@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -23,8 +24,8 @@ public class home extends AppCompatActivity {
     Context context;
     ImageButton buttonNature , buttonAround;
     public static DatabaseHelper db;
-    int [] listGambar={R.drawable.kawahputih,R.drawable.perkebunantehrancabali,R.drawable.situpatenggang,R.drawable.tangkubanperahu,
-            R.drawable.batucinta,R.drawable.kawahputih,R.drawable.perkebunantehrancabali};
+    int [] listGambar={R.drawable.w_alam,R.drawable.w_bermain,R.drawable.w_sejarah,R.drawable.w_belanja,
+            R.drawable.w_seni,R.drawable.w_kuliner,R.drawable.marker};
     String [] listJudul={"Wisata Alam","Taman Bermain","Wisata Sejarah","Pusat Perbelanjaan ","Wisata Seni dan Budaya","Wisata Kuliner",
                         "Wisata Sekitar"};
 
@@ -101,20 +102,64 @@ public class home extends AppCompatActivity {
         db.insertTempatWisata(mp);
 
 
-        final ArrayList<TempatWisata> tw = db.getTempatWisata();
+        //final ArrayList<TempatWisata> tw = db.getTempatWisata();
 
-        if(tw.isEmpty())
-            Toast.makeText(home.this, "Data Tempat Wisata tidak terambil", Toast.LENGTH_LONG).show();
-        else
-            Toast.makeText(home.this, "Data Tempat Wisata terambil", Toast.LENGTH_LONG).show();
+        //if(tw.isEmpty())
+        //    Toast.makeText(home.this, "Data Tempat Wisata tidak terambil", Toast.LENGTH_LONG).show();
+        //else
+         //   Toast.makeText(home.this, "Data Tempat Wisata terambil", Toast.LENGTH_LONG).show();
         context = this;
         viewPager = findViewById(R.id.view_pager);
+
         adapter = new CustomSwipeAdapter(this);
         lv1.setAdapter(new CustomAdapterHome(this,listGambar,listJudul));
         viewPager.setAdapter(adapter);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(null);
+        Intent i = getIntent();
+        int id = i.getIntExtra("id",-1);
+        switch (id){
+            case 0:
+                final ArrayList<TempatWisata> tw = db.getTempatWisataKategori("alam");
+                Intent toNatureList = new Intent(home.this, list_page.class);
+                toNatureList.putExtra("LIST", (Serializable) tw);
+                startActivity(toNatureList);
+                break;
+            /*case 1:
+                final ArrayList<TempatWisata> tw = db.getTempatWisataKategori("taman bermain");
+                Intent toThemePark = new Intent(home.this, list_page.class);
+                toThemePark.putExtra("LIST", (Serializable) tw);
+                startActivity(toThemePark);
+                break;
+            case 2:
+                final ArrayList<TempatWisata> tw = db.getTempatWisataKategori("sejarah");
+                Intent toHistory = new Intent(home.this, list_page.class);
+                toHistory.putExtra("LIST", (Serializable) tw);
+                startActivity(toHistory);
+                break;
+            case 3:
+                final ArrayList<TempatWisata> tw = db.getTempatWisataKategori("alam");
+                Intent toNatureList = new Intent(home.this, list_page.class);
+                toNatureList.putExtra("LIST", (Serializable) tw);
+                startActivity(toNatureList);
+                break;
+            case 4:
+                final ArrayList<TempatWisata> tw = db.getTempatWisataKategori("alam");
+                Intent toNatureList = new Intent(home.this, list_page.class);
+                toNatureList.putExtra("LIST", (Serializable) tw);
+                startActivity(toNatureList);
+                break;
+            case 5:
+                final ArrayList<TempatWisata> tw = db.getTempatWisataKategori("alam");
+                Intent toNatureList = new Intent(home.this, list_page.class);
+                toNatureList.putExtra("LIST", (Serializable) tw);
+                startActivity(toNatureList);
+                break;*/
+            case 6:
+                Intent toAroundMap = new Intent(home.this, maps.class);
+                startActivity(toAroundMap);
+        }
         /*buttonNature = findViewById(R.id.natureButton);
 
         buttonNature.setOnClickListener(new View.OnClickListener() {

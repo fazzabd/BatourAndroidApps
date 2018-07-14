@@ -67,6 +67,19 @@ public class CustomAdapterHome extends BaseAdapter{
         holder.img.setImageResource(gambar[position]);
         holder.tv.setText(judul[position]);
 
+        rowView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    Intent toList = new Intent(context, home.class);
+                    toList.putExtra("id", position);
+                    context.startActivity(toList);
+                }
+                //Toast.makeText(context, "You Clicked "+result[position], Toast.LENGTH_LONG).show();
+               // Intent toList = new Intent(context, list_page.class);
+                //toList.putExtra("nama", nama);
+                //context.startActivity(toDesc);
+        });
+
         return rowView;
     }
 }
