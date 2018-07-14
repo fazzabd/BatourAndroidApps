@@ -1,5 +1,6 @@
 package app.satu.com.batourproject;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -7,22 +8,31 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
 public class home extends AppCompatActivity {
+    ListView lv1;
     ViewPager viewPager;
+    CustomAdapterHome adapterlist;
     CustomSwipeAdapter adapter;
     Toolbar toolbar;
+    Context context;
     ImageButton buttonNature , buttonAround;
     public static DatabaseHelper db;
+    int [] listGambar={R.drawable.kawahputih,R.drawable.perkebunantehrancabali,R.drawable.situpatenggang,R.drawable.tangkubanperahu,
+            R.drawable.batucinta,R.drawable.kawahputih,R.drawable.perkebunantehrancabali};
+    String [] listJudul={"Wisata Alam","Taman Bermain","Wisata Sejarah","Pusat Perbelanjaan ","Wisata Seni dan Budaya","Wisata Kuliner",
+                        "Wisata Sekitar"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
+        lv1=(ListView) findViewById(R.id.listViewHome);
 
         /*
         //memeriksa database
@@ -91,22 +101,21 @@ public class home extends AppCompatActivity {
         db.insertTempatWisata(mp);
 
 
-
-
         final ArrayList<TempatWisata> tw = db.getTempatWisata();
 
         if(tw.isEmpty())
             Toast.makeText(home.this, "Data Tempat Wisata tidak terambil", Toast.LENGTH_LONG).show();
         else
             Toast.makeText(home.this, "Data Tempat Wisata terambil", Toast.LENGTH_LONG).show();
-
+        context = this;
         viewPager = findViewById(R.id.view_pager);
         adapter = new CustomSwipeAdapter(this);
+        lv1.setAdapter(new CustomAdapterHome(this,listGambar,listJudul));
         viewPager.setAdapter(adapter);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(null);
-        buttonNature = findViewById(R.id.natureButton);
+        /*buttonNature = findViewById(R.id.natureButton);
 
         buttonNature.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,7 +133,7 @@ public class home extends AppCompatActivity {
                 Intent toAroundMap = new Intent(home.this, maps.class);
                 startActivity(toAroundMap);
             }
-        });
+        });*/
 
     }
 }
