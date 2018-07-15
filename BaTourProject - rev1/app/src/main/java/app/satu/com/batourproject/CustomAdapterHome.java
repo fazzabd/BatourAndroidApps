@@ -61,11 +61,11 @@ public class CustomAdapterHome extends BaseAdapter{
         Holder holder=new Holder();
         View rowView;
         rowView = inflater.inflate(R.layout.list_home_layout, null);
-        holder.tv=(TextView) rowView.findViewById(R.id.textViewHome);
+        //holder.tv=(TextView) rowView.findViewById(R.id.textViewHome);
         holder.img=(ImageView) rowView.findViewById(R.id.imageViewHome);
 
         holder.img.setImageResource(gambar[position]);
-        holder.tv.setText(judul[position]);
+        //holder.tv.setText(judul[position]);
 
         rowView.setOnClickListener(new View.OnClickListener() {
             @Override

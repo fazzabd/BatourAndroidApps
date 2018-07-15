@@ -37,12 +37,25 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/view_pager1"
+    <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="250dp">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager1"
+            android:layout_width="fill_parent"
+            android:layout_height="250dp">
 
-    </android.support.v4.view.ViewPager>
+        </android.support.v4.view.ViewPager>
+        <Button
+            android:text="Lihat Map"
+            android:id="@+id/buttonOpenMap"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginLeft="300dp" />
+
+    </RelativeLayout>
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

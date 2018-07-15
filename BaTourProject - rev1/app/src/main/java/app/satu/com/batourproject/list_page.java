@@ -16,11 +16,12 @@ public class list_page extends AppCompatActivity {
     CustomListAdapter adapter = null;
 
     ArrayList prgmName;
-    public static int [] prgmImages={R.drawable.kawahputih,R.drawable.perkebunantehrancabali,R.drawable.situpatenggang,R.drawable.tangkubanperahu,R.drawable.batucinta,R.drawable.kawahputih,R.drawable.perkebunantehrancabali,R.drawable.situpatenggang,R.drawable.tangkubanperahu,R.drawable.batucinta};
-    public static String [] prgmNameList={"Kawah Putih","Perkebunan Teh Rancabali","Situ Patenggang","Tangkuban Perahu ","Batu Cinta"};
-    public static String [] Alamat={"Jalan Raya Soreang Ciwidey Kilo Meter 25, Desa Ciwidey, Kecamatan Ciwidey, Kabupaten Bandung,","Jl. Rancabali, Ciwidey, Bandung, ","Jl. Situ Patengan Ciwidey Bandung","Jalan Raya Tangkuban Perahu, Lembang","Jl. Situ Patengan, Patengan, Rancabali, Bandung,"};
-    public static String [] opengate={"Jam Buka: 7.00 - 17.00 WIB","Jam Buka: 7.00-17.00 WIB ","Jam Buka: 09.00–17.00 WIB","Jam Buka: 07.00 – 17.00 WIB","Jam Buka: 06.00-18.00 WIB"};
-    public static String [] htm={"HTM: Rp.18.000/org","HTM: Rp. 0/org","HTM: Rp.18.000/org","HTM: 20.000/org","HTM: Rp.18.000/org"};
+    public static int [] alam={R.drawable.kp1,R.drawable.tr1,R.drawable.sp,R.drawable.tb1,R.drawable.bc1};
+    public static int [] sejarah={R.drawable.gkl1,R.drawable.gm1,R.drawable.gb1,R.drawable.aab1,R.drawable.gs1};
+    public static int [] bermain={R.drawable.tfb1,R.drawable.hf1,R.drawable.ks1,R.drawable.tsb1,R.drawable.tm1};
+    public static int [] seni={R.drawable.grs,R.drawable.kam1,R.drawable.tb1,R.drawable.sau1,R.drawable.mb};
+    public static int [] belanja={R.drawable.kawahputih,R.drawable.pjp1,R.drawable.pbtc1,R.drawable.pc,R.drawable.md};
+    public static int [] kuliner={R.drawable.gsb1,R.drawable.dmh1,R.drawable.ob,R.drawable.br1};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,27 @@ public class list_page extends AppCompatActivity {
 
         Intent i = getIntent();
         tw = (ArrayList<TempatWisata>) i.getSerializableExtra("LIST");
-        adapter = new CustomListAdapter(this,prgmImages);
+        String jenis = tw.get(0).getJenis();
+        switch(jenis){
+            case "alam":
+                adapter = new CustomListAdapter(this,alam);
+                break;
+            case "sejarah":
+                adapter = new CustomListAdapter(this,sejarah);
+                break;
+            case "taman bermain":
+                adapter = new CustomListAdapter(this,bermain);
+                break;
+            case "belanja":
+                adapter = new CustomListAdapter(this,belanja);
+                break;
+            case "Seni dan Budaya":
+                adapter = new CustomListAdapter(this,seni);
+                break;
+            case "kuliner":
+                adapter = new CustomListAdapter(this,kuliner);
+                break;
+        }
 
         refreshListAdapter();
         /*if(tw.isEmpty())

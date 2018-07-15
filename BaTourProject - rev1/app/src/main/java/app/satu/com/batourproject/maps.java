@@ -176,8 +176,23 @@ public class maps extends FragmentActivity
         // Turn on the My Location layer and the related control on the map.
         updateLocationUI();
 
-        // Get the current location of the device and set the position of the map.
-        getDeviceLocation();
+
+        LatLng objLatLng = null;
+        try{
+            objLatLng=getIntent().getExtras().getParcelable("Latlng");
+        }catch(Exception e){
+
+        }
+
+        if(objLatLng != null){
+            //LatLng sydney = new LatLng(-33.852, 151.211);
+            map.addMarker(new MarkerOptions().position(objLatLng)
+                    .title("Marker di Kawah Putih"));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(objLatLng, DEFAULT_ZOOM));
+        }else{
+            // Get the current location of the device and set the position of the map.
+            getDeviceLocation();
+        }
     }
 
     /**

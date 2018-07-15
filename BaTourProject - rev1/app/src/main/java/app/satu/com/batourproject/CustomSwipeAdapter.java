@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 /**
  * Created by USER on 3/31/2018.
@@ -51,7 +50,6 @@ public class CustomSwipeAdapter extends PagerAdapter{
         try{
             String nama = intent.getStringExtra("nama");
             //Memeriksa apakah data diterima dari intent
-            Toast.makeText(ctx, "Posisi = "+ nama, Toast.LENGTH_LONG).show();
             switch (nama) {
                 case "Kawah Putih":
                     imageVew.setImageResource(image_resources[position]);
@@ -75,7 +73,6 @@ public class CustomSwipeAdapter extends PagerAdapter{
         }
         catch(NullPointerException ex) {
             String nama = "";
-            Toast.makeText(ctx, "Posisi = "+ nama, Toast.LENGTH_LONG).show();
             switch (nama) {
                 case "Kawah Putih":
                     imageVew.setImageResource(image_resources[position]);

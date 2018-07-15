@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="130dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:textColor="#09b709"
         android:textStyle="bold"
         android:text="Jam Buka 7.00-16.00"
@@ -45,12 +45,11 @@
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/textView3"
-        android:gravity="right"
-        android:text="HTM:5000/org"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="70dp"
         android:textColor="#09b709"
-        android:textSize="12dp" />
+        android:textStyle="bold"
+        android:text="HTM: Rp. 5000/org"
+        android:textSize="10dp" />
 
 </RelativeLayout>
