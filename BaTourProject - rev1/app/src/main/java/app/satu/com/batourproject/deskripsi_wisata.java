@@ -15,7 +15,7 @@ import com.google.android.gms.maps.model.LatLng;
 public class deskripsi_wisata extends AppCompatActivity {
     ViewPager viewPager1;
     CustomSwipeAdapter adapter1;
-    TextView descTxt;
+    TextView descTxt, Nama;
     DatabaseHelper db = home.db;
     Button buttonMap;
     @Override
@@ -27,6 +27,7 @@ public class deskripsi_wisata extends AppCompatActivity {
         Intent intent = getIntent();
         adapter1 = new CustomSwipeAdapter(this, intent);
         String nama = intent.getStringExtra("nama");
+        Nama = findViewById(R.id.Nama);
         descTxt = findViewById(R.id.txtDesc);
         TempatWisata t = null;
         t = db.getOneTempatWisata(nama);
@@ -35,6 +36,7 @@ public class deskripsi_wisata extends AppCompatActivity {
         }
         else {
             descTxt.setText(t.getDeskripsi());
+            Nama.setText(t.getNama());
         }
 
         LatLng latlng = null;

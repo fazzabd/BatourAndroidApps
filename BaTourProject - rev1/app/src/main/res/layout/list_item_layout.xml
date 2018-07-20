@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="130dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="40dp"
         android:text="Jl. Raya Ciwidey Patengan Km 11"
         android:textSize="10dp" />
 
@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="130dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="70dp"
         android:textColor="#09b709"
         android:textStyle="bold"
         android:text="Jam Buka 7.00-16.00"
@@ -46,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="130dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="90dp"
         android:textColor="#09b709"
         android:textStyle="bold"
         android:text="HTM: Rp. 5000/org"

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ public class list_page extends AppCompatActivity {
     Context context;
     ArrayList<TempatWisata> tw = null;
     CustomListAdapter adapter = null;
-
+    TextView kategori ;
     ArrayList prgmName;
     public static int [] alam={R.drawable.kp1,R.drawable.tr1,R.drawable.sp,R.drawable.tb1,R.drawable.bc1};
     public static int [] sejarah={R.drawable.gkl1,R.drawable.gm1,R.drawable.gb1,R.drawable.aab1,R.drawable.gs1};
@@ -29,7 +30,7 @@ public class list_page extends AppCompatActivity {
         setContentView(R.layout.list_page);
 
         context=this;
-
+        kategori = findViewById(R.id.kategori);
         lv=(ListView) findViewById(R.id.listView);
 
         Intent i = getIntent();
@@ -37,21 +38,27 @@ public class list_page extends AppCompatActivity {
         String jenis = tw.get(0).getJenis();
         switch(jenis){
             case "alam":
+                kategori.setText("Wisata Alam");
                 adapter = new CustomListAdapter(this,alam);
                 break;
             case "sejarah":
+                kategori.setText("Wisata Sejarah");
                 adapter = new CustomListAdapter(this,sejarah);
                 break;
             case "taman bermain":
+                kategori.setText("Taman Bermain");
                 adapter = new CustomListAdapter(this,bermain);
                 break;
             case "belanja":
+                kategori.setText("Wisata Belanja");
                 adapter = new CustomListAdapter(this,belanja);
                 break;
             case "Seni dan Budaya":
-                adapter = new CustomListAdapter(this,seni);
+                kategori.setText("Wisata Seni Dan Budaya");
+                adapter = new CustomListAdapter(this,seni );
                 break;
             case "kuliner":
+                kategori.setText("Wisata Kuliner");
                 adapter = new CustomListAdapter(this,kuliner);
                 break;
         }

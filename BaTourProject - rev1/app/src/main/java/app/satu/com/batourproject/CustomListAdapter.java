@@ -27,6 +27,8 @@ public class CustomListAdapter extends BaseAdapter{
     Context context;
     int [] imageId;
     ArrayList<TempatWisata> tw = null;
+    //TextView Jenis ;
+
     private static LayoutInflater inflater=null;
     public CustomListAdapter(list_page listPage, String[] prgmNameList, String[] Alamat, String[] opengate,String[] htm, int[] prgmImages) {
         // TODO Auto-generated constructor stub
@@ -41,11 +43,14 @@ public class CustomListAdapter extends BaseAdapter{
     }
 
     public CustomListAdapter(list_page listPage, ArrayList<TempatWisata> tw) {
+
         this.context=listPage;
         this.tw=tw;
     }
 
     public CustomListAdapter(Activity activity, int[] prgmImages) {
+
+
         inflater = (LayoutInflater) activity
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.context=activity;
